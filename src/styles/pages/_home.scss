@@ -1,0 +1,14 @@
+/******************************************************************************
+* Home page
+******************************************************************************/
+body {
+  background-color: #fff;
+}
+
+@import "components/header";
+@import "pages/home_howitworks";
+@import "pages/home_partners";
+@import "pages/home_ideas";
+@import "components/footer";
+
+@import "base/mockup";

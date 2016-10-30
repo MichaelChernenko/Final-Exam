@@ -1,0 +1,161 @@
+/******************************************************************************
+* Footer
+******************************************************************************/
+footer {
+  background-color: $color_background_main;
+  border-top: 4px solid $color_controls;
+}
+
+.footer-container {
+  margin: 16px auto 0px;
+  width: $device_width_small;
+  @include mquery(medium) {
+    width: $device_width_medium;
+    margin-bottom: 26px;
+  }
+  @include mquery(large) {
+    width: $device_width_large;
+    margin-bottom: 22px;
+  }
+}
+
+.footer__logo {
+  text-align: center;
+  @include mquery(medium) {
+    float: left;
+    padding: 20px 41px;
+  }
+  @include mquery(large) {
+    float: left;
+    padding: 19px 0;
+  }
+  a {
+    color: $color_controls;
+    font: {
+      family: $font_main_bold;
+      size: 16px;
+    }
+    letter-spacing: 1px;
+    text-decoration: none;
+  }
+}
+
+nav {
+  @include mquery(medium) {
+    float: left;
+    padding: 8px 41px;
+  }
+  @include mquery(large) {
+    padding-left: 96px;
+  }
+}
+
+%footer-menus {
+  list-style: none;
+  padding: 0 0;
+}
+
+.footer-menu {
+  @extend %footer-menus;
+  margin: 0 0;
+  > li {
+    color: $color_text_title;
+    display: block;
+    font: {
+      family: $font_main_bold;
+      size: 14px;
+    }
+    margin-top: 12px;
+    text-align: center;
+    @include mquery(medium) {
+      float: left;
+      text-align: left;
+      margin-right: 103px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    @include mquery(large) {
+      margin-right: 93px;
+    }
+    a {
+      color: $color_text_title;
+      font: {
+        family: $font_main_bold;
+        size: 14px;
+      }
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.footer-menu__submenu {
+  @extend %footer-menus;
+  margin: 1px 0px;
+  @include mquery(medium) {
+    margin-top: 12px;
+  }
+  > li {
+    display: inline-block;
+    margin: 0 5px;
+    @include mquery(medium) {
+      display: block;
+      margin: 0 0 5px 0;
+    }
+    a {
+      color: $color_text_subtitle;
+      font: {
+        family: $font_main_light;
+        size: 14px;
+      }
+      text: {
+        align: center;
+        decoration: none;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.footer-disigned {
+  text-align: center;
+  padding-bottom: 14px;
+  @include mquery(medium) {
+    float: right;
+    padding: 7px 36px;
+    text-align: right;
+  }
+  @include mquery(large) {
+    padding: 6px 0;
+  }
+  a {
+    background-image: url(../img/areto_logo.png);
+    display: block;
+    height: 24px;
+    text-decoration: none;
+    width: 110px;
+    transition: background-position 0.5s;
+    &:hover {
+      background-position: 110px -24px;
+    }
+  }
+}
+
+.footer-designed__title {
+  color: $color_designed;
+  font: {
+    family: $font_main_bold;
+    size: 10px;
+  }
+  letter-spacing: 1px;
+  margin: 16px 0 6px;
+  text-transform: uppercase;
+  @include mquery(large) {
+    margin: 15px -1px 6px;
+  }
+}
